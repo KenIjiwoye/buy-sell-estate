@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :amenities
   resources :properties
   devise_for :users
   root 'public#index'

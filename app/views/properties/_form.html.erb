@@ -17,7 +17,7 @@
     <%= f.input :beds %>
     <%= f.input :baths %>
     <%= f.input :garage %>
-    <%= f.input :belongs_to %>
+    <%= f.collection_select :amenity_ids, Amenity.order(:name), :id, :name, {}, { class: 'form-control', multiple: true, include_blank: false}  %>
   </div>
 
   <div class="form-actions">
