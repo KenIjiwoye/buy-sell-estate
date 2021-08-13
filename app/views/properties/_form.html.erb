@@ -1,0 +1,26 @@
+
+<%= simple_form_for(@property) do |f| %>
+  <%= f.error_notification %>
+  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+
+  <div class="form-inputs">
+    <%= f.input :address1 %>
+    <%= f.input :address2 %>
+    <%= f.input :city %>
+    <%= f.input :state %>
+    <%= f.input :zipcode %>
+    <%= f.input :description %>
+    <%= f.input :price %>
+    <%= f.input :propertyType %>
+    <%= f.input :status %>
+    <%= f.input :area %>
+    <%= f.input :beds %>
+    <%= f.input :baths %>
+    <%= f.input :garage %>
+    <%= f.input :belongs_to %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>
