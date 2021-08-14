@@ -66,9 +66,13 @@
 </p>
 
 <p>
-  <strong>Belongs to:</strong>
-  <%= @property.belongs_to %>
+  <strong>Amenities:</strong>
+  <% @property.amenities.each do |a| %>
+   <br> <%= a.name %> <br>
+  <%end%>
 </p>
+
+
 
 <%= link_to 'Edit', edit_property_path(@property) %> |
 <%= link_to 'Back', properties_path %>

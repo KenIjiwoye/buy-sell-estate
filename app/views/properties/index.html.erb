@@ -18,7 +18,6 @@
       <th>Beds</th>
       <th>Baths</th>
       <th>Garage</th>
-      <th>Belongs to</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -39,7 +38,6 @@
         <td><%= property.beds %></td>
         <td><%= property.baths %></td>
         <td><%= property.garage %></td>
-        <td><%= property.belongs_to %></td>
         <td><%= link_to 'Show', property %></td>
         <td><%= link_to 'Edit', edit_property_path(property) %></td>
         <td><%= link_to 'Destroy', property, method: :delete, data: { confirm: 'Are you sure?' } %></td>

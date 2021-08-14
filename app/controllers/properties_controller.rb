@@ -1,5 +1,6 @@
 class PropertiesController < ApplicationController
   before_action :set_property, only: %i[ show edit update destroy ]
+  before_action :set_user
 
   # GET /properties or /properties.json
   def index
@@ -12,7 +13,7 @@ class PropertiesController < ApplicationController
 
   # GET /properties/new
   def new
-    @property = Property.new
+    @property = @user.properties.build
   end
 
   # GET /properties/1/edit
@@ -21,7 +22,7 @@ class PropertiesController < ApplicationController
 
   # POST /properties or /properties.json
   def create
-    @property = Property.new(property_params)
+    @property = @user.properties.build(property_params)
 
     respond_to do |format|
       if @property.save
@@ -61,9 +62,12 @@ class PropertiesController < ApplicationController
     def set_property
       @property = Property.find(params[:id])
     end
+    def set_user
+      @user = current_user
+    end
 
     # Only allow a list of trusted parameters through.
     def property_params
-      params.require(:property).permit(:address1, :address2, :city, :state, :zipcode, :description, :price, :propertyType, :status, :area, :beds, :baths, :garage, { amenity_ids:[]})
+      params.require(:property).permit(:address1, :address2, :city, :state, :zipcode, :description, :price, :propertyType, :status, :area, :beds, :baths, :garage, { :amenity_ids => []})
     end
 end
