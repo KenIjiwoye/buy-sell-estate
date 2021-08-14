@@ -5,6 +5,20 @@
 
   <div class="form-inputs">
     <%= f.input :email, required: true, autofocus: true %>
+    <%= f.input :firstName  %>
+    <%= f.input :middleName  %>
+    <%= f.input :lastName  %>
+    <%= f.input :title  %>
+    <%= f.input :about  %>
+    <%= f.input :workPhone  %>
+    <%= f.input :mobilePhone  %>
+    <%= f.input :skype  %>
+    <%= f.input :facebook  %>
+    <%= f.input :twitter  %>
+    <%= f.input :instagram  %>
+    <%= f.input :pinterest  %>
+    <%= f.input :youtube  %>
+    
 
     <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
       <p>Currently waiting confirmation for: <%= resource.unconfirmed_email %></p>

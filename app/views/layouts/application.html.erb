@@ -11,8 +11,11 @@
   </head>
 
   <body>
+   <div class="container">
+    <%= link_to "Edit User", edit_user_registration_path %>
   <p class="notice"><%= notice %></p>
        <p class="alert"><%= alert %></p>
     <%= yield %>
+   </div>
   </body>
 </html>
