@@ -13,3 +13,10 @@
  */
 // Custom bootstrap variables must be set or imported *before* bootstrap.
 @import "bootstrap";
+
+@import "animate/animate.min.css";
+@import "font-awesome/css/font-awesome.min.css";
+@import "ionicons/css/ionicons.min.css";
+@import "owlcarousel/assets/owl.carousel.min.css";
+
+@import "./main_styles.scss";
