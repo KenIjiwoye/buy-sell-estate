@@ -5,10 +5,14 @@ class PropertiesController < ApplicationController
   # GET /properties or /properties.json
   def index
     @properties = Property.all
+    @users = User.all
   end
 
   # GET /properties/1 or /properties/1.json
   def show
+    @listing = @property.user_id
+    @agent = User.find(@listing)
+
   end
 
   # GET /properties/new

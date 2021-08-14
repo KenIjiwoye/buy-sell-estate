@@ -34,6 +34,10 @@ gem 'pg'
 gem 'figaro'
 gem 'bootstrap', '~> 5.1.0'
 gem 'carrierwave', '~> 2.0'
+# gem "scrollreveal-rails"    
+gem 'owlcarousel-rails'
+
+
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false

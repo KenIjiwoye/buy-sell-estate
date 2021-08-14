@@ -24,7 +24,7 @@
           </div>
         </div>
       </div>
-      <div class="carousel-item-a intro-item bg-image" style="background-image: url(img/slide-2.jpg)">
+      <div class="carousel-item-a intro-item bg-image" style="background-image: url(/images/slide-2.jpg)">
         <div class="overlay overlay-a"></div>
         <div class="intro-content display-table">
           <div class="table-cell">
@@ -47,7 +47,7 @@
           </div>
         </div>
       </div>
-      <div class="carousel-item-a intro-item bg-image" style="background-image: url(img/slide-3.jpg)">
+      <div class="carousel-item-a intro-item bg-image" style="background-image: url(/images/slide-3.jpg)">
         <div class="overlay overlay-a"></div>
         <div class="intro-content display-table">
           <div class="table-cell">
@@ -73,3 +73,47 @@
     </div>
   </div>
   <!--/ Carousel end /-->
+
+<script>
+ /*--/ Carousel owl /--*/
+  $("#carousel").owlCarousel({
+    loop: true,
+    margin: -1,
+    items: 1,
+    nav: true,
+    navText: [
+      '<i class="ion-ios-arrow-back" aria-hidden="true"></i>',
+      '<i class="ion-ios-arrow-forward" aria-hidden="true"></i>',
+    ],
+    autoplay: true,
+    autoplayTimeout: 3000,
+    autoplayHoverPause: true,
+  });
+
+  /*--/ Animate Carousel /--*/
+  $(".intro-carousel").on("translate.owl.carousel", function () {
+    $(".intro-content .intro-title").removeClass("zoomIn animated").hide();
+    $(".intro-content .intro-price").removeClass("fadeInUp animated").hide();
+    $(".intro-content .intro-title-top, .intro-content .spacial")
+      .removeClass("fadeIn animated")
+      .hide();
+  });
+
+  $(".intro-carousel").on("translated.owl.carousel", function () {
+    $(".intro-content .intro-title").addClass("zoomIn animated").show();
+    $(".intro-content .intro-price").addClass("fadeInUp animated").show();
+    $(".intro-content .intro-title-top, .intro-content .spacial")
+      .addClass("fadeIn animated")
+      .show();
+  });
+
+  /*--/ Navbar Collapse /--*/
+  $(".navbar-toggle-box-collapse").on("click", function () {
+    $("body").removeClass("box-collapse-closed").addClass("box-collapse-open");
+  });
+  $(".close-box-collapse, .click-closed").on("click", function () {
+    $("body").removeClass("box-collapse-open").addClass("box-collapse-closed");
+    $(".menu-list ul").slideUp(700);
+  });
+
+</script>

@@ -1,3 +1,5 @@
+// import "scrollReveal";
+
 (function ($) {
   "use strict";
 
@@ -29,8 +31,8 @@
   var navHeight = nav.outerHeight();
 
   /*--/ ScrollReveal /Easy scroll animations for web and mobile browsers /--*/
-  window.sr = ScrollReveal();
-  sr.reveal(".foo", { duration: 1000, delay: 15 });
+  //   window.sr = ScrollReveal();
+  //   sr.reveal(".foo", { duration: 1000, delay: 15 });
 
   /*--/ Carousel owl /--*/
   $("#carousel").owlCarousel({
