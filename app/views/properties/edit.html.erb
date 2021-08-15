@@ -1,6 +1,10 @@
-<h1>Editing Property</h1>
+<div class="container" style="padding-top: 6em;" >
+    <h1>Editing Property</h1>
 
-<%= render 'form', property: @property %>
+    <%= render 'form', property: @property %>
 
-<%= link_to 'Show', @property %> |
-<%= link_to 'Back', properties_path %>
+    <div class="container">
+        <%= link_to 'View Property', @property %> |
+        <%= link_to 'Back to Properties List', properties_path %>
+    </div>
+</div>

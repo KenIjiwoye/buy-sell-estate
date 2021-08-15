@@ -25,6 +25,12 @@
     </div>
   </section>
   <!--/ Intro Single End /-->
+ 
+  <% if current_user %>
+     <div class="container">
+        <%= link_to "Add New Property ", new_property_path, class: 'btn btn-a' %>
+      </div>
+  <%end%>
 
   <!--/ Property Grid Star /-->
   <section class="property-grid grid">

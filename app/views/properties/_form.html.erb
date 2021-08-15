@@ -4,23 +4,54 @@
   <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
 
   <div class="form-inputs">
-    <%= f.input :address1 %>
-    <%= f.input :address2 %>
-    <%= f.input :city %>
-    <%= f.input :state %>
-    <%= f.input :zipcode %>
-    <%= f.input :description %>
-    <%= f.input :price %>
-    <%= f.input :propertyType %>
-    <%= f.input :status %>
-    <%= f.input :area %>
-    <%= f.input :beds %>
-    <%= f.input :baths %>
-    <%= f.input :garage %>
-    <%= f.collection_select :amenity_ids, Amenity.order(:name), :id, :name, {}, { class: 'form-control', multiple: true, include_blank: false}  %>
+    <%= f.input :address1, wrapper_html:{class:'form-a'} %>
+    <%= f.input :address2, wrapper_html:{class:'form-a'} %>
+    <div class="row">
+      <div class="col-auto">
+      <%= f.input :city, wrapper_html:{class:'form-a'} %>
+      </div>
+      <div class="col-auto">
+      <%= f.input :state, wrapper_html:{class:'form-a'} %>
+      </div>
+      <div class="col-auto">
+      <%= f.input :zipcode, wrapper_html:{class:'form-a'} %>  
+      </div>
+    </div>
+    <div class="row">
+    <%= f.input :description, wrapper_html:{class:'form-a'} %>
+    </div>
+    <div class="row">
+      <div class="col-auto">
+      <%= f.input :price, wrapper_html:{class:'form-a'} %>
+      </div>
+      <div class="col-auto">
+      <%= f.input :propertyType, wrapper_html:{class:'form-a'} %>
+      </div>
+      <div class="col-auto">
+      <%= f.input :status, wrapper_html:{class:'form-a'} %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-auto">
+      <%= f.input :area, wrapper_html:{class:'form-a'} %>
+      </div>
+      <div class="col-auto">
+      <%= f.input :beds, wrapper_html:{class:'form-a'} %>
+      </div>
+      <div class="col-auto">
+      <%= f.input :baths, wrapper_html:{class:'form-a'} %>
+      </div>
+      <div class="col-auto">
+      <%= f.input :garage, wrapper_html:{class:'form-a'} %>
+      </div>
+      <div class="row">
+      <label for="">Amenities</label>
+      <%= f.collection_select :amenity_ids, Amenity.order(:name), :id, :name, {}, { class: 'form-control form-a', multiple: true, include_blank: false}  %>
+      </div>
+    </div>
   </div>
 
-  <div class="form-actions">
-    <%= f.button :submit %>
+  <div class="form-actions my-4">
+    <%= f.button :submit, class:'btn btn-a' %>
   </div>
 <% end %>

@@ -1,7 +1,9 @@
 
-<div class="container">
+<div class="container" style="padding-top: 6em;">
 <h1>New Property</h1>
     <%= render 'form', property: @property %>
 
-    <%= link_to 'Back', properties_path %>
+    <div class="container">
+        <%= link_to 'Back to Properties List', properties_path %>
+    </div>
 </div>
