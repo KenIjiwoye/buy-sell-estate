@@ -41,3 +41,4 @@ yarn-debug.log*
 
 # Ignore application configuration
 /config/application.yml
+/config/fine-way-323210-a5420aae8653.json
