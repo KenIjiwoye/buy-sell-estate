@@ -27,9 +27,10 @@
               <div class="card-overlay-a-content">
                 <div class="card-header-a">
                   <h2 class="card-title-a">
-                    <a href="property-single.html">
-                    <%= p.address1 %>
-                      <br /> <%= p.city %>, <%= p.state %> </a>
+                    <%= link_to property_path(p) do %>
+                      <%= p.address1 %>
+                      <br /> <%= p.city %>, <%= p.state %>
+                    <%end%>
                   </h2>
                 </div>
                 <div class="card-body-a">
