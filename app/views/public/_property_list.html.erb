@@ -21,7 +21,7 @@
         <div class="carousel-item-b">
           <div class="card-box-a card-shadow">
             <div class="img-box-a">
-              <img src="/images/property-6.jpg" alt="" class="img-a img-fluid">
+              <img src=" <%= url_for(p.images[0]) %> " alt="" class="img-a img-fluid">
             </div>
             <div class="card-overlay">
               <div class="card-overlay-a-content">
@@ -34,7 +34,7 @@
                 </div>
                 <div class="card-body-a">
                   <div class="price-box d-flex">
-                    <span class="price-a">rent | <%= number_to_currency(p.price) %></span>
+                    <span class="price-a">for sale | <%= number_to_currency(p.price) %></span>
                   </div>
                   <%= link_to "Click here to view", property_path(p), class: 'link-a' %>
                     <span class="ion-ios-arrow-forward" style="color: #fff;" ></span>
