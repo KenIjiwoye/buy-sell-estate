@@ -73,7 +73,6 @@ ActiveRecord::Schema.define(version: 2021_08_17_101433) do
     t.bigint "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.json "property_images"
     t.index ["user_id"], name: "index_properties_on_user_id"
   end
 
@@ -85,8 +84,8 @@ ActiveRecord::Schema.define(version: 2021_08_17_101433) do
     t.datetime "remember_created_at"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.string "firstName", default: "f"
-    t.string "lastName", default: "f"
+    t.string "firstName"
+    t.string "lastName"
     t.string "middleName"
     t.string "title"
     t.text "about"

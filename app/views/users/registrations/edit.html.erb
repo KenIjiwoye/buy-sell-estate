@@ -6,7 +6,7 @@
 
       <div class="form-inputs">
         <label for="">Upload Profile Image</label>
-        <%= image_tag(url_for(@user.avatar), height: '200' ) %>
+       
         <%= f.file_field :avatar %> <hr>
         <%= f.input :email, required: true, autofocus: true %>
         <%= f.input :firstName  %>
