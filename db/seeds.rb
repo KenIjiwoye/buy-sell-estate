@@ -34,7 +34,7 @@ baths: 3,
 garage: 1,
 user_id: 1,)
 
-property.amenities.update([amenities])
+property.amenities << amenities
 
 property.images.attach(io: File.open(Rails.root.join('app/assets/images/seed_img/1.webp')),filename:'1.webp')
 property.images.attach(io: File.open(Rails.root.join('app/assets/images/seed_img/2.webp')),filename:'2.webp')
