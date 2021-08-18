@@ -8,9 +8,13 @@
               <h2 class="title-a">Best Agents</h2>
             </div>
             <div class="title-link">
-              <a href="agents-grid.html">All Agents
+              <%= link_to (users_path) do %>
+                All Agents
                 <span class="ion-ios-arrow-forward"></span>
-              </a>
+              <%end%>
+              <%# <a href="agents-grid.html">All Agents
+                <span class="ion-ios-arrow-forward"></span>
+              </a> %>
             </div>
           </div>
         </div>
@@ -20,14 +24,19 @@
         <div class="col-md-4">
           <div class="card-box-d">
             <div class="card-img-d">
-              <img src="/images/agent-4.jpg" alt="" class="img-d img-fluid">
+            <%# image placholder for reference. issue with nil avatar on fresh database %>
+            <%# /images/agent-4.jpg %>
+              <img src=" <%= url_for(u.avatar) %> " alt="" class="img-d img-fluid">
             </div>
             <div class="card-overlay card-overlay-hover">
               <div class="card-header-d">
                 <div class="card-title-d align-self-center">
                   <h3 class="title-d">
-                    <a href="agent-single.html" class="link-two"> <%= u.firstName %> <%= u.middleName %>
-                      <br> <%= u.lastName %> </a>
+                    <%= link_to user_path(u) do %>
+                      <%= u.firstName %> <%= u.middleName %>
+                      <br> <%= u.lastName %>
+                    <%end%>
+                  
                   </h3>
                 </div>
               </div>
