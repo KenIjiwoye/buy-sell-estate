@@ -32,18 +32,9 @@ area: 1977,
 beds: 4,
 baths: 3,
 garage: 1,
-user_id: user.last.id,)
+user_id: 1,)
 
 property.amenities.update([amenities])
 
-property.images.attach([
-    io: File.open(Rails.root.join('app/assets/images/seed_img/1.webp')),filename:'1.webp',
-    io: File.open(Rails.root.join('app/assets/images/seed_img/2.webp')),filename:'2.webp',
-    io: File.open(Rails.root.join('app/assets/images/seed_img/3.webp')),filename:'3.webp',
-    io: File.open(Rails.root.join('app/assets/images/seed_img/4.webp')),filename:'4.webp',
-    io: File.open(Rails.root.join('app/assets/images/seed_img/5.webp')),filename:'5.webp',
-    io: File.open(Rails.root.join('app/assets/images/seed_img/6.webp')),filename:'6.webp',
-    io: File.open(Rails.root.join('app/assets/images/seed_img/7.webp')),filename:'7.webp',
-    io: File.open(Rails.root.join('app/assets/images/seed_img/8.webp')),filename:'8.webp',
-    io: File.open(Rails.root.join('app/assets/images/seed_img/9.webp')),filename:'9.webp',
-])
+property.images.attach(io: File.open(Rails.root.join('app/assets/images/seed_img/1.webp')),filename:'1.webp')
+property.images.attach(io: File.open(Rails.root.join('app/assets/images/seed_img/2.webp')),filename:'2.webp')
