@@ -1,4 +1,4 @@
-<div class="container" style="margin-top: 5em;" >
+<div class="container register-update" style="margin-top: 5em;" >
     <h2>Edit <%= resource_name.to_s.humanize %></h2>
 
     <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
@@ -8,20 +8,60 @@
         <label for="">Upload Profile Image</label>
        
         <%= f.file_field :avatar %> <hr>
-        <%= f.input :email, required: true, autofocus: true %>
-        <%= f.input :firstName  %>
-        <%= f.input :middleName  %>
-        <%= f.input :lastName  %>
-        <%= f.input :title  %>
-        <%= f.input :about  %>
-        <%= f.input :workPhone  %>
-        <%= f.input :mobilePhone  %>
-        <%= f.input :skype  %>
-        <%= f.input :facebook  %>
-        <%= f.input :twitter  %>
-        <%= f.input :instagram  %>
-        <%= f.input :pinterest  %>
-        <%= f.input :youtube  %>
+        <div class="row">
+            <div class="col">
+                <%= f.input :email, required: true, autofocus: true %>
+            </div>
+        </div>
+        <div class="row">
+          <div class="col">
+              <%= f.input :firstName  %>
+          </div>
+          <div class="col">
+              <%= f.input :middleName  %>
+          </div>
+          <div class="col">
+              <%= f.input :lastName  %>
+          </div>
+          <div class="col">
+              <%= f.input :title  %>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+              <%= f.input :about  %>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+              <%= f.input :workPhone  %>
+          </div>
+          <div class="col">
+              <%= f.input :mobilePhone  %>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <%= f.input :skype  %>
+            <%= f.input :facebook  %>
+            <%= f.input :twitter  %>
+          </div>
+          <div class="col">
+              <%= f.input :instagram  %>
+              <%= f.input :pinterest  %>
+              <%= f.input :youtube  %>
+          </div>
+        </div>
+        
+        
+        <hr>
+        <hr>
+        
+        
+        
+        
+
+        
         
 
         <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
@@ -35,6 +75,7 @@
         <%= f.input :password_confirmation,
                     required: false,
                     input_html: { autocomplete: "new-password" } %>
+                    <br> <br> <hr>
         <%= f.input :current_password,
                     hint: "we need your current password to confirm your changes",
                     required: true,
@@ -42,10 +83,10 @@
       </div>
 
       <div class="form-actions">
-        <%= f.button :submit, "Update" %>
+        <%= f.button :submit, "Update", class: 'btn btn-a' %>
       </div>
     <% end %>
-
+<br> <br>
     <h3>Cancel my account</h3>
 
     <p>Unhappy? <%= link_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
