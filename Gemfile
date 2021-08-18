@@ -33,9 +33,10 @@ gem 'better_errors', '~> 2.9', '>= 2.9.1'
 gem 'pg'
 gem 'figaro'
 gem 'bootstrap', '~> 5.1.0'
-gem 'carrierwave', '~> 2.0'
+# gem 'carrierwave', '~> 2.0'
 # gem "scrollreveal-rails"    
 gem 'owlcarousel-rails'
+gem 'google-cloud-storage', '~> 1.34', '>= 1.34.1'
 
 
 
