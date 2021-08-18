@@ -2,7 +2,9 @@ Rails.application.routes.draw do
 
   resources :amenities
   resources :properties
-  devise_for :users
+  devise_for :users, controllers: {
+        registrations: 'users/registrations'
+      }
   resources :users, only: [:index, :show]
   root 'public#index'
   resources :public, only: [:index]
