@@ -18,6 +18,11 @@ local:
 google:
   service: GCS
   project: my_first_project
+  credentials: <%= ENV['GOOGLE_APPLICATION_CREDENTIALS'].as_json %>
+  bucket: estate_agency
+google_dev:
+  service: GCS
+  project: my_first_project
   credentials: <%= Rails.root.join("config/fine-way-323210-a5420aae8653.json") %>
   bucket: estate_agency
 # Use rails credentials:edit to set the Azure Storage secret (as azure_storage:storage_access_key)
